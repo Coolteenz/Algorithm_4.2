@@ -38,6 +38,18 @@ void bubble_sort(std::list<int>& intList)
 
 void insertion_sort(std::list<int>& intList)
 {
+	int i, j, temp;
+	int length = intList.size();
+	for (j = 1; j < length; j++)   
+	{
+		temp = intList[j];
+		for (i = j - 1; (i >= 0) && (intList[i] < temp); i--)   
+		{
+			intList[i + 1] = intList[i];
+		}
+		intList[i + 1] = temp;    
+	}
+	return;
 	//TODO sort the list from the smallest to the biggest number using insertion sort
 
 
