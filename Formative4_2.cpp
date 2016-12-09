@@ -16,6 +16,22 @@ void show_list(std::list<int>& intList)
 
 void bubble_sort(std::list<int>& intList)
 {
+	int i, j, temp;
+	int numLength = intList.size();
+	for (i = 1; i <= numLength - 1; i++)
+	{
+		for (j = 0; j <= numLength - i - 1; j++)
+		{
+			if (intList[j] > intList[j + 1])
+			{
+				temp = intList [j];
+				intList[j] = intList[j + 1];
+				intList[j + 1] = temp;
+			}
+		}
+	}
+
+	return;
 	//TODO sort the list from the smallest to the biggest number using bubble sort
 }
 
